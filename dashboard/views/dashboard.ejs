@@ -1,0 +1,9 @@
+<%- include("partials/header", { bot, user, path, title: "Dashboard" }) %>
+
+<% user.guilds.forEach(guild => {
+const permsOnGuild = new perms(guild.permissions);
+if(!permsOnGuild.has("MANAGE_GUILD")) return;
+%>
+<br>
+<% }); %>
+<%- include("partials/footer") %>
