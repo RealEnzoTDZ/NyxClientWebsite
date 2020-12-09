@@ -1,0 +1,28 @@
+<%- include("partials/header", { bot, user, path, title: "Download" }) %>
+
+<head>
+    <link rel="icon" href="https://cdn.glitch.com/49bb5a74-432a-4d4e-8c1b-d5bfdd488b10%2Fcircle-cropped%20(1).png?v=1605898957123">
+    <meta property="og:site_name" content="✰𝒩𝓎𝓍 𝒞𝓁𝒾𝑒𝓃𝓉✰™">
+    <meta property="og:title" content="【•Redirect•】">
+    <meta property="og:description" content="⚠︎no-data⚠︎">
+</head>
+
+<style>
+  body {
+    background: white;
+  }
+</style>
+
+<div class="content">
+<!-- Add icon library -->
+
+<a 
+  href="https://s3-us-west-2.amazonaws.com/ky22o6s6g8be80bak577b17e34bb93cex3.pdf"
+  download="{{ user.name | slugify }}-{{ 'now' | date: "%Y" }}-tax-return.pdf">
+  
+</a>
+
+<span class="errorHeader"><a class="downldLink">No Download Available</a></span>
+
+</div>
+<%- include("partials/footer") %>

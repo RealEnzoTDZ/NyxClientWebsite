@@ -1,0 +1,26 @@
+<%- include("partials/header", { bot, user, path, title: "Settings" }) %>
+
+<div class="content">
+<% if (alert) { %>
+  <p class="alertBanner"><%= alert %></p><br>
+<% } %>
+
+<form style="margin-top: 1em;" method="POST"> <!-- method="post" tiggers a POST request to the same url with the body of the form control inputs -->
+  <h1 class="guildTitle"><%= guild.name %></h1>
+  <p>Prefix:</p>
+  <input type="text" name="prefix" value="<%= settings.prefix %>" placeholder="<%= settings.prefix%>"><br><br>
+  <p>Maintenance:</p>
+  <input type="text" name="maintenance" value="<%= settings.maintenance %>" placeholder="<%= settings.maintenance %>"><br><br>
+  <p>Welcome Channel Id:</p>
+  <input type="number" name="welcomeChannelId" value="<%= settings.welcomeChannelId %>" placeholder="<%= settings.welcomeChannelId %>"><br><br>
+  <p>Leave Channel Id:</p>
+  <input type="number" name="leaverChannelId" value="<%= settings.leaverChannelId %>" placeholder="<%= settings.leaverChannelId %>"><br><br>
+  <p>Welcome Message:</p>
+  <input type="boolean" name="member" value="true" placeholder="true"><br><br>
+  <button type="submit">Save Settings</button>
+</form>
+
+<!--<iframe src="https://discord.com/widget?id=<%=guild.id%>&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>-->
+</div>
+
+<%- include("partials/footer") %>
